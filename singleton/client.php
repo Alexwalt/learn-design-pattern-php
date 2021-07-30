@@ -7,7 +7,7 @@
  */
 require __DIR__.'/vendor/autoload.php';
 
-$inst1 = \App\SingletonEager::getInstance();
+$inst1 = \App\SingletonLazy::getInstance();
 $inst1->setProperty("hello","world");
 //unset($inst1);
 //$inst2 = \App\SingletonEager::getInstance();

@@ -9,7 +9,10 @@ require __DIR__.'/vendor/autoload.php';
 
 $inst1 = \App\SingletonLazy::getInstance();
 $inst1->setProperty("hello","world");
-//unset($inst1);
+echo $inst1->getProperty("hello") .PHP_EOL;
+$inst2 = \App\SingletonLazy::getInstance();
+echo $inst1->getProperty("hello") .PHP_EOL;
+
 //$inst2 = \App\SingletonEager::getInstance();
 //$inst2->setProperty("mine","little water");
-//echo $inst2->getProperty("hello");
+//echo $inst2->getProperty("hello") .PHP_EOL ;

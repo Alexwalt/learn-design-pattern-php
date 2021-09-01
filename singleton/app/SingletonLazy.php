@@ -9,7 +9,7 @@
 namespace App;
 
 /**
- * 懒汉式
+ * 懒汉式（需要时候创建实例）
  * Class SingletonLazy
  * @package App
  */

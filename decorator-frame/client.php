@@ -6,8 +6,6 @@
  * Time: 11:50
  */
 
-use App\RuleConfigSource;
-
 require __DIR__.'/vendor/autoload.php';
 
 $component = new \App\ConcreteComponent();

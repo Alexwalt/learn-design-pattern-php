@@ -5,7 +5,7 @@ namespace App;
 
 class RuleConfigSource
 {
-    protected IRuleConfigParser $parser;
+    protected  $parser;
     protected $ruleConfig;
 
     public function  load( $ruleConfigFilePath)

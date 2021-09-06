@@ -17,8 +17,9 @@ class MarioStateMachine
 	public function __construct(State $state)
 	{
 		$this->currentState = $state;
+//		$this->currentState->setValue('SMALL');
 		$this->score = 0;
-		$this->currentState = State::SMALL;
+
 	}
 
 	public function obtainMushRoom() {
@@ -42,6 +43,6 @@ class MarioStateMachine
     }
 
     public function getCurrentState() {
-        return $this->currentState;
+        return $this->currentState->getValue();
     }
 }

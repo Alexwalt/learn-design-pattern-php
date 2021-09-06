@@ -29,7 +29,7 @@ class State
 		//判断键值是否唯一，防止写错
 		if(count(array_unique(array_values(self::EnumState)))   != count(self::EnumState))
 		{
-			throw new \Exception('Key value is not unique!');
+			echo 'Key value is not unique!' .PHP_EOL;
 		}
 		$this->value = self::EnumState['SMALL'];
 	}

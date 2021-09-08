@@ -4,7 +4,7 @@
 PHP有clone关键字，可以使用clone关键字直接对类新型拷贝
 
 
-```
+```php
 class Resource {
     public $id;
     public $name;

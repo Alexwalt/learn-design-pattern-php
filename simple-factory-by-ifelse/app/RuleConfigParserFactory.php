@@ -2,7 +2,7 @@
 namespace App;
 
 /**
- * 简单工厂的第二种实现方法
+ * 简单工厂的第一种实现方法
  */
 class RuleConfigParserFactory
 {

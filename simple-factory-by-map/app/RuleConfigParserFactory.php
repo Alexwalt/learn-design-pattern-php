@@ -25,7 +25,9 @@ class RuleConfigParserFactory
 
         if(!in_array($configFormat,["json","xml","yaml"]))
         {
-            //错误    
+            //错误
+	        echo "Don't concrete the parser " . $configFormat .PHP_EOL;
+	        exit();
         }
         return self::$cachedParsers[$configFormat];
     }

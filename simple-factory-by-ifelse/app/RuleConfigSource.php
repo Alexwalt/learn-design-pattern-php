@@ -11,16 +11,8 @@ class RuleConfigSource
     public function  load( $ruleConfigFilePath)
     {
         $ruleConfigFileExtension = $this->getFileExtension($ruleConfigFilePath);
-      
-        if( strcasecmp($ruleConfigFileExtension,"json" )===0){
-            $this->parser = new JsonRuleConfigParser();
-        } else if ( strcasecmp($ruleConfigFileExtension,"xml" )===0){
-            $this->parser = new XmlRuleConfigParser();
-        } else if( strcasecmp($ruleConfigFileExtension,"yaml" )===0){
-            $this->parser = new YamlRuleConfigParser();
-        } else {
-            //default
-        }
+        $this->parser = RuleConfigParserFactory::createParse($ruleConfigFileExtension);
+
         $configText = "";
         $this->ruleConfig =  $this->parser->parser($configText);
         return $this->ruleConfig;

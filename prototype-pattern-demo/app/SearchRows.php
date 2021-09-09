@@ -9,7 +9,7 @@
 namespace App;
 
 
-class Goods
+class SearchRows
 {
 	public $id;
 	public $name;

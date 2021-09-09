@@ -67,8 +67,8 @@ class Demo
 		// TODO: 从数据库中取出更新时间>lastUpdateTime的数据
 		// select * from tabel where updated_at > $lastUpdateTime;
 		$goods = [
-			new Goods(3,'alexwalt',5321,1630998932),
-		    new Goods(4,'little',742,1630998932)
+			new SearchRows(3,'alexwalt',5321,1630998932),
+		    new SearchRows(4,'little',742,1630998932)
 		];
 		return $goods;
 	}

@@ -22,11 +22,6 @@ class Demo
 		$this->currentKeywordsInstance = $inst;
 		$this->currentKeywords = $inst->getValues();
 	}
-	public function out()
-	{
-		echo json_encode(array_column($this->currentKeywords,'id')) .PHP_EOL  ;
-//		$newKeyworks = clone $this->currentKeywords;
-	}
 
 	public function refresh()
 	{

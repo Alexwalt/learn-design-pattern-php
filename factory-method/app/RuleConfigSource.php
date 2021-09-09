@@ -23,7 +23,11 @@ class RuleConfigSource
 		    //default
 	    }
 	    $parser = $parserFactory->createParser();
-        
+
+		//使用简单工厂再次重构
+//	    $parserFactory = RuleConfigParserFactoryMap::getParserFactory($ruleConfigFileExtension);
+//	    $parser = $parserFactory->createParser();
+
         $configText = "";
         $this->ruleConfig =  $parser->parser($configText);
         return $this->ruleConfig;

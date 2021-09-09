@@ -37,10 +37,16 @@
 # 总结
 如果构造函数参数过多，考虑使用建造者模式，先设置建造者的变量，然后再一次性地创建对象，让对象一直处于有效状态。
 
-参考资料：
+# 参考资料：
+
 [1]. [极客时间《设计模式》（王争）](http://gk.link/a/10xlp)
+
 [2].《[研磨设计模式》（陈臣、王斌）](https://book.douban.com/subject/5343318/)
+
 [3]. [《Learning PHP设计模式》](https://book.douban.com/subject/25952240/)
+
 [4]. [从零使用composer初始化PSR-4项目](https://blog.csdn.net/hl449006540/article/details/119188623)
+
 [5]. [https://learnku.com/docs/php-design-patterns/2018/Builder/1488](https://learnku.com/docs/php-design-patterns/2018/Builder/1488)
+
 [6]. [https://www.cnblogs.com/sunshine-H/p/8268553.html](https://www.cnblogs.com/sunshine-H/p/8268553.html)

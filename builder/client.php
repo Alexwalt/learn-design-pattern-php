@@ -5,15 +5,14 @@
  */
 require __DIR__.'/vendor/autoload.php';
 
-$builderResource = new \App\Builder();
+$resourceBuilder = new \App\ResourceBuilder();
 try{
-	$builderResource = $builderResource->setName("resource")
+	$poolConfig = $resourceBuilder->setName("resource")
 		->setMaxIdle(10)
 		->setMinIdle(1)
 		->setMaxTotal(12)
 		->build();
 
-	$poolConfig = new \App\ResourcePoolConfig($builderResource);
 	var_dump($poolConfig);
 } catch (Exception $exception){
 	echo $exception->getMessage() . PHP_EOL;

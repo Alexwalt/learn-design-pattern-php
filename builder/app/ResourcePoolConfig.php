@@ -12,7 +12,7 @@ class ResourcePoolConfig
 	private $maxTotal;
 	private $maxIdle;
 	private $minIdle;
-	public function __construct(Builder $builder)
+	public function __construct(ResourceBuilder $builder)
 	{
 		$this->name = $builder->name;
 		$this->maxIdle = $builder->maxIdle;

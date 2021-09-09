@@ -6,7 +6,7 @@
 
 namespace App;
 
-class Builder
+class ResourceBuilder implements IBuilder
 {
 	const DEFAULT_MAX_TOTAL = 8;
 	const DEFAULT_MAX_IDLE = 8;
@@ -34,7 +34,7 @@ class Builder
 			throw new \Exception("...");
 		}
 
-		return $this;
+		return new ResourcePoolConfig($this);
 
 	}
 

@@ -13,4 +13,5 @@ require __DIR__.'/vendor/autoload.php';
 $obj = new RuleConfigSource();
 
 $config = $obj->load('a.json');
-print($config);
+print($config['rule'] . PHP_EOL);
+print($config['system'] . PHP_EOL);

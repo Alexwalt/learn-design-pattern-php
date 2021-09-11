@@ -6,20 +6,20 @@ namespace App;
  */
 class RuleConfigParserFactory
 {
-    private static $cachedParsers;
+    private static $cachedFactory;
 
 
     private static function init()
     {
-        self::$cachedParsers=[
-            "json" => new JsonRuleConfigParser(),
-            "xml" => new XmlRuleConfigParser(),
-            "yaml" => new YamlRuleConfigParser(),
+        self::$cachedFactory=[
+            "json" => new JsonConfigParserFactory(),
+            "xml" => new XmlConfigParserFactory(),
+            "yaml" => new YamlConfigParserFactory(),
     
         ];
     }
    
-    public static function createParse($configFormat)
+    public static function getParserFactory($configFormat)
     {
         self::init();
 
@@ -27,6 +27,6 @@ class RuleConfigParserFactory
         {
             //错误    
         }
-        return self::$cachedParsers[$configFormat];
+        return self::$cachedFactory[$configFormat];
     }
 }

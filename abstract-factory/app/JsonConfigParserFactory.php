@@ -3,11 +3,11 @@ namespace App;
 
 class JsonConfigParserFactory implements IConfigParserFactory
 {
-    public function createRuleParser(): IRuleConfigParser {
+    public function createRuleParser(){
         return new JsonRuleConfigParser();
     }
 
-    public function createSystemParser():ISystemConfigParser
+    public function createSystemParser()
     {
         return new JsonSystemConfigParser();
     }

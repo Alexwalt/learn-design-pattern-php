@@ -6,6 +6,6 @@ class YamlRuleConfigParser implements IRuleConfigParser
 {
     public function parser($configText)
     {
-        return "yaml";
+        return "rule config yaml";
     }
 }

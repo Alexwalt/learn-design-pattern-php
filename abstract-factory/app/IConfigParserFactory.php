@@ -4,7 +4,7 @@ namespace App;
 
 interface IConfigParserFactory
 {
-    public function createRuleParser(): IRuleConfigParser ;
-    public function createSystemParser():ISystemConfigParser;
+    public function createRuleParser() ;
+    public function createSystemParser();
 
 }

@@ -5,6 +5,6 @@ class XmlRuleConfigParser implements IRuleConfigParser
 {
     public function parser($configText)
     {
-        return "xml";
+        return "rule config xml";
     }
 }

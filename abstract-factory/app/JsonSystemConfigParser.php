@@ -6,6 +6,6 @@ class JsonSystemConfigParser implements ISystemConfigParser
 {
     public function parser($configText)
     {
-        return "json";
+        return "system config json";
     }
 }

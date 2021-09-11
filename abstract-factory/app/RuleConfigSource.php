@@ -5,23 +5,32 @@ namespace App;
 
 class RuleConfigSource
 {
-    protected IRuleConfigParser $parser;
-    protected $ruleConfig;
+	protected $parserFactory;
+	protected $ruleParser;
+	protected $systemParser;
+	protected $ruleConfig;
+	protected $systemConfig;
 
     public function  load( $ruleConfigFilePath)
     {
         $ruleConfigFileExtension = $this->getFileExtension($ruleConfigFilePath);
       
-        $this->parser = RuleConfigParserFactory::createParse($ruleConfigFileExtension);
-        
+        $this->parserFactory =  RuleConfigParserFactory::getParserFactory($ruleConfigFileExtension);
+	    $this->ruleParser =$this->parserFactory->createRuleParser();
+	    $this->systemParser=$this->parserFactory->createSystemParser();
         $configText = "";
-        $this->ruleConfig =  $this->parser->parser($configText);
-        return $this->ruleConfig;
+        $this->ruleConfig =  $this->ruleParser->parser($configText);
+	    $this->systemConfig =  $this->systemParser->parser($configText);
+        return [
+        	'rule' =>$this->ruleConfig,
+	        'system' =>$this->systemConfig
+        ];
     }
-    
-    /**
-     * 解析文件扩展名
-     */
+
+	/**
+	 * @param $ruleConfigFilePath
+	 * @return mixed
+	 */
     private function getFileExtension($ruleConfigFilePath)
     {
         //for example

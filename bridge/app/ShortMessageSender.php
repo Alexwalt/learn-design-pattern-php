@@ -9,11 +9,11 @@
 namespace App;
 
 /**
- * 语言电话
- * Class TelephoneSender
+ * 短消息
+ * Class ShortMessageSender
  * @package App
  */
-class TelephoneSender implements MsgSender
+class ShortMessageSender implements MsgSender
 {
 	private $telephone;
 
@@ -24,6 +24,6 @@ class TelephoneSender implements MsgSender
 
 	public function send($message)
 	{
-		echo "Send $message  $this->telephone by telephone" . PHP_EOL;
+		echo "Send $message  $this->telephone by shot message" . PHP_EOL;
 	}
 }

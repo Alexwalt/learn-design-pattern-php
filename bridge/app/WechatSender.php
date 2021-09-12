@@ -8,7 +8,11 @@
 
 namespace App;
 
-
+/**
+ * 微信消息
+ * Class WechatSender
+ * @package App
+ */
 class WechatSender implements MsgSender
 {
 	private $wechatId;

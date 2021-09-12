@@ -8,7 +8,11 @@
 
 namespace App;
 
-
+/**
+ * 严重
+ * Class SevereNotification
+ * @package App
+ */
 class SevereNotification extends Notification
 {
 

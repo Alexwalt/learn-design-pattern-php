@@ -8,7 +8,11 @@
 
 namespace App;
 
-
+/**
+ * 普通
+ * Class NormalNotification
+ * @package App
+ */
 class NormalNotification extends Notification
 {
 	public function notify( $message)

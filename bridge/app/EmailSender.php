@@ -8,7 +8,11 @@
 
 namespace App;
 
-
+/**
+ * 邮件
+ * Class EmailSender
+ * @package App
+ */
 class EmailSender implements MsgSender
 {
 	private $email;

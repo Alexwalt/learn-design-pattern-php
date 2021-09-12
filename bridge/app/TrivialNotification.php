@@ -8,7 +8,11 @@
 
 namespace App;
 
-
+/**
+ * 无关紧要
+ * Class TrivialNotification
+ * @package App
+ */
 class TrivialNotification extends Notification
 {
 	public function notify( $message)
